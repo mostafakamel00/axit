@@ -1,0 +1,89 @@
+/*start media query*/
+/*phone and tab screen*/
+@media (max-width: 767px) {
+  .header {
+    height: 100vh;
+  }
+  .header .header-one {
+    margin-left: 40px;
+  }
+  .header .header-two {
+    padding-top: 20px;
+  }
+  .our-social {
+    box-shadow: none;
+  }
+  .our-social .social-one h4 {
+    text-align: center;
+  }
+  .our-social .social-two {
+    height: 145px;
+  }
+  .tabs .switch {
+    display: flex;
+  }
+  .tabs .tab-content button {
+    margin: 10px;
+    position: relative;
+    left: 133px;
+  }
+  .sub-list {
+    padding-top: 0;
+  }
+  .sub-list h3 {
+    margin-top: 55px;
+  }
+  .sub-list .list-icon p {
+    width: 400px;
+  }
+  .price .box-price,
+  .box-pricetwo {
+    margin-top: 10px;
+  }
+  .testimonial .row p {
+    margin-top: 10px;
+  }
+  .style {
+    background-attachment: unset;
+  }
+}
+/*media screen*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .header .overlay .row .col-md-6 form input {
+    width: 82%;
+  }
+  .our-social {
+    box-shadow: none;
+  }
+  .tabs ul {
+    position: relative;
+    right: 25px;
+  }
+  .tabs .tab-content button {
+    position: relative;
+    left: 200px;
+  }
+  .sub-list .col-lg-7 {
+    margin-top: 55px;
+  }
+  .sub-list .col-lg-7 h3 {
+    text-align: center;
+  }
+  .sub-list .col-lg-7 h3:after {
+    margin: 10px auto;
+  }
+  .price .box-pricethree {
+    position: relative;
+    left: 65%;
+  }
+  .testimonial .client-three {
+    margin: 10px auto;
+  }
+}
+/*large screen*/
+@media (min-width: 992) and (max-width: 1199px) {
+}
+/*exrta large screen*/
+@media (min-width: 1200px) {
+}
+/*end media query*/

@@ -1,0 +1,647 @@
+/*start global rules*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  scroll-behavior: unset;
+}
+.scrolled {
+  background: #080;
+}
+$mainfont: 20px;
+$maincolor: #ff5722;
+$maincolorp: #a0a0a0;
+/*end global rules*/
+/*start navbar*/
+.navbar {
+  .navbar-brand {
+    @extend %upper;
+    font-family: "Lobster", cursive;
+    font-size: $mainfont * 2;
+    padding: 0;
+    span {
+      color: $maincolor;
+    }
+  }
+}
+/*end navbar*/
+/*start header*/
+.header {
+  color: #fff;
+  background: url("../images/header3.jpg") no-repeat;
+  background-size: cover;
+  height: 85vh;
+  position: relative;
+  .overlay {
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .row {
+      margin-top: 25vh;
+      .col-md-6 {
+        .h1 {
+          font-weight: bold;
+          font-size: $mainfont * 3;
+          span {
+            color: $maincolor;
+          }
+        }
+        p {
+          width: 70%;
+        }
+        .lead:after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 2px;
+          margin-top: 17px;
+          background: #fff;
+        }
+        .pp {
+          font-style: italic;
+        }
+        button {
+          background: none;
+          border: 1px solid #eee;
+          border-radius: 4px;
+          color: #fff;
+          padding: 6px;
+          margin-top: 20px;
+          @extend %transition;
+          @extend %upper;
+          &:hover {
+            @extend %hover;
+          }
+        }
+        .h1,
+        .lead {
+          @extend %upper;
+        }
+      }
+      .col-md-6 {
+        form {
+          background: #fff;
+          border-radius: 5px;
+          margin: 0 50px;
+          h3 {
+            color: #060606;
+            padding: 5px;
+            font-size: 24px;
+            border-radius: 5px;
+            font-weight: bolder;
+            background: #eee;
+            span {
+              color: $maincolor;
+            }
+          }
+          input {
+            display: block;
+            border: none;
+            width: 88%;
+            border-bottom: 2px dotted rgb(44, 120, 235);
+            position: relative;
+            left: 40px;
+            height: 60px;
+          }
+          input[type="submit"] {
+            background: $maincolor;
+            color: #fff;
+            border: none;
+            border-radius: 0 0 5px 5px;
+            width: 100%;
+            left: 0;
+            margin-top: 30px;
+            @extend %transition;
+            @extend %upper;
+            &:hover {
+              @extend %hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*end header*/
+/*start social*/
+.our-social {
+  margin: 30px 0;
+  box-shadow: 120px 3px 10px #ccc;
+  h4 {
+    font-weight: bolder;
+    @extend %upper;
+    padding: 10px 0 0;
+  }
+  .lead {
+    color: $maincolorp;
+    font-style: italic;
+  }
+  ul {
+    i {
+      color: #ccc;
+      margin-left: 40px;
+      position: relative;
+      top: 35px;
+      @extend %transition;
+    }
+    .fa-facebook-f:hover {
+      color: #3b5998;
+    }
+    .fa-twitter:hover {
+      color: #1da1f2;
+    }
+    .fa-google-plus-g:hover {
+      color: #dd4b39;
+    }
+    .fa-pinterest:hover {
+      color: #e60023;
+    }
+    .fa-instagram:hover {
+      color: #fd1d1d;
+    }
+    .fa-stumbleupon:hover {
+      color: #eb4924;
+    }
+    .fa-rss:hover {
+      color: #f26522;
+    }
+  }
+}
+/*end social*/
+
+/*start tabs*/
+.tabs {
+  background: #f5f5f5;
+  padding: 40px;
+  ul {
+    li {
+      background: #333;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      width: 125px;
+      height: 90px;
+      line-height: 90px;
+      cursor: pointer;
+      @extend %upper;
+      @extend %transition;
+      &:hover {
+        background: $maincolor;
+      }
+    }
+    .select {
+      background: $maincolor;
+      @extend %transition;
+    }
+  }
+  .tab-content {
+    div:not(.tab-one) {
+      display: none;
+    }
+    h4 {
+      font-weight: bolder;
+      padding-bottom: 40px;
+    }
+    p {
+      color: $maincolorp;
+      font-style: italic;
+    }
+    button {
+      background: $maincolor;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      color: #fff;
+      padding: 6px;
+      margin-top: 20px;
+      @extend %transition;
+      @extend %upper;
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+  img {
+    width: 382px;
+    height: 315px;
+  }
+}
+/*end tabs*/
+/*start sublist*/
+.sub-list {
+  padding-top: 40px;
+  img {
+    box-shadow: 5px 4px 6px #ccc;
+    position: relative;
+    top: 50px;
+  }
+  h3 {
+    font-weight: bolder;
+    &:after {
+      margin: 10px 0 33px;
+      @extend %after;
+    }
+  }
+  p {
+    color: $maincolorp;
+  }
+  .fa-cloud-download-alt,
+  .fa-cloud-upload-alt {
+    color: $maincolor;
+    position: relative;
+    top: 30px;
+    border-radius: 50%;
+    border: 1px solid $maincolor;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .list-icon {
+    position: relative;
+    left: 80px;
+    bottom: 20px;
+    h4 {
+      font-weight: bold;
+    }
+  }
+}
+/*end sublist*/
+/*start stander picture*/
+.stander-picture {
+  padding: 40px 0 25px;
+  background: #f5f5f5;
+  h3 {
+    font-weight: bolder;
+    &:after {
+      margin: 10px 0 33px;
+      @extend %after;
+    }
+  }
+  p {
+    color: $maincolorp;
+  }
+  img {
+    box-shadow: 5px 4px 6px #ccc;
+    border-radius: 20px;
+  }
+}
+/*end stander picture*/
+/*start awesome*/
+.awesome {
+  padding: 30px 0;
+  h3 {
+    padding-bottom: 30px;
+    font-weight: bold;
+    @extend %upper;
+    &:after {
+      @extend %afterbody;
+      @extend %after;
+    }
+  }
+  p {
+    color: $maincolorp;
+    padding-bottom: 30px;
+  }
+  .row {
+    .fa-lightbulb,
+    .fa-dragon,
+    .fa-keyboard {
+      border-radius: 50%;
+      border: 2px solid $maincolor;
+      color: $maincolor;
+      width: 60px;
+      height: 50px;
+      line-height: 50px;
+    }
+    h4 {
+      padding: 15px 0;
+      font-weight: bold;
+    }
+    p {
+      margin: 0 15px;
+    }
+  }
+}
+/*end awesome*/
+/*start pricing*/
+.price {
+  padding: 30px 0;
+  background: #f5f5f5;
+  h3 {
+    padding-bottom: 30px;
+    font-weight: bold;
+    @extend %upper;
+    &:after {
+      @extend %afterbody;
+      @extend %after;
+    }
+  }
+  p {
+    color: $maincolorp;
+    padding-bottom: 30px;
+  }
+  .box-price {
+    padding: 25px 0 0;
+    h5 {
+      background: #333;
+      color: $maincolor;
+      width: 260px;
+      height: 45px;
+      line-height: 45px;
+      @extend %upper;
+    }
+    .span-price {
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+      width: 260px;
+      height: 130px;
+      line-height: 45px;
+      position: relative;
+      bottom: 7px;
+      border-bottom: 5px solid $maincolor;
+      .our-span {
+        font-size: $mainfont * 3;
+        font-weight: bolder;
+        .usd {
+          font-size: $mainfont;
+          font-weight: bolder;
+        }
+      }
+    }
+    ul {
+      background: #fff;
+      width: 260px;
+      position: relative;
+      bottom: 5px;
+      li {
+        @extend %upper;
+        color: $maincolorp;
+      }
+    }
+  }
+  .box-pricetwo {
+    h5 {
+      background: #333;
+      color: $maincolor;
+      width: 260px;
+      height: 45px;
+      line-height: 45px;
+      @extend %upper;
+    }
+    .span-price {
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+      width: 260px;
+      height: 167px;
+      line-height: 45px;
+      position: relative;
+      bottom: 7px;
+      .our-span {
+        font-size: $mainfont * 3;
+        font-weight: bolder;
+        .usd {
+          font-size: $mainfont;
+          font-weight: bolder;
+        }
+        strong {
+          position: relative;
+          top: 8px;
+        }
+      }
+      button {
+        background: $maincolor;
+        color: #fff;
+        border: none;
+        @extend %upper;
+        &:hover {
+          @extend %hover;
+        }
+      }
+    }
+    ul {
+      background: #fff;
+      width: 260px;
+      position: relative;
+      bottom: 5px;
+      li {
+        @extend %upper;
+        color: $maincolorp;
+      }
+    }
+  }
+}
+/*end pricing*/
+/*start testimonial*/
+.testimonial {
+  h3 {
+    padding: 30px 0;
+    font-weight: bolder;
+    @extend %upper;
+    &:after {
+      @extend %afterbody;
+      @extend %after;
+    }
+  }
+  p {
+    color: $maincolorp;
+    padding: 30px 0;
+  }
+  .row {
+    p {
+      background: #f5f5f5;
+      color: $maincolorp;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 15px 15px 15px;
+        border-color: #f5f5f5 transparent transparent;
+        position: absolute;
+        bottom: -28px;
+        left: 123px;
+      }
+    }
+    img {
+      border: 2px dotted #ad5c09;
+      width: 169px;
+      height: 150px;
+    }
+    .caption {
+      flex-direction: column;
+      margin-left: 10px;
+      span {
+        color: $maincolorp;
+      }
+    }
+  }
+}
+/*end testimonial*/
+/*start style section*/
+.style {
+  background: url("../images/style.jpg") no-repeat fixed;
+  background-size: cover;
+  min-height: 300px;
+  margin: 30px 0 0;
+  .our-style {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 300px;
+    .h1 {
+      color: #fff;
+      padding: 40px 0 20px;
+      @extend %upper;
+      &:after {
+        @extend %after;
+        @extend %afterbody;
+      }
+    }
+    p {
+      color: $maincolorp;
+      padding-bottom: 30px;
+    }
+    button {
+      background: none;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      color: #fff;
+      text-transform: capitalize;
+      padding: 7px 24px;
+      @extend %transition;
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+}
+/*end style section*/
+/*start contact us*/
+.contact-us {
+  padding: 30px 0;
+  .h1 {
+    font-weight: bolder;
+    padding-bottom: 20px;
+    @extend %upper;
+    &:after {
+      @extend %after;
+      @extend %afterbody;
+    }
+  }
+  p {
+    color: $maincolorp;
+    padding-bottom: 20px;
+  }
+  .row {
+    input {
+      border: none;
+      border-bottom: 2px solid #f5f5f5;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+    }
+    textarea {
+      border: none;
+      border-bottom: 2px solid #f5f5f5;
+      width: 100%;
+      height: 150px;
+      padding: 15px 20px;
+    }
+  }
+  button {
+    background: $maincolor;
+    border: 1px solid #eee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    @extend %transition;
+    &:hover {
+      @extend %hover;
+    }
+  }
+}
+/*end contact us*/
+/*start footer*/
+.footer {
+  padding: 30px 0;
+  background: rgb(7, 7, 7);
+  ul {
+    i {
+      color: #fff;
+      padding-left: 15px;
+      @extend %transition;
+    }
+    .fa-facebook-f:hover {
+      color: #3b5998;
+    }
+    .fa-twitter:hover {
+      color: #1da1f2;
+    }
+    .fa-google-plus-g:hover {
+      color: #dd4b39;
+    }
+    .fa-pinterest:hover {
+      color: #e60023;
+    }
+    .fa-instagram:hover {
+      color: #fd1d1d;
+    }
+    .fa-stumbleupon:hover {
+      color: #eb4924;
+    }
+    .fa-rss:hover {
+      color: #f26522;
+    }
+  }
+  span {
+    strong {
+      color: $maincolor;
+    }
+  }
+}
+/*end footer*/
+/*start scroll button*/
+#scroll-top {
+  width: 50px;
+  height: 40px;
+  color: $maincolor;
+  text-align: center;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+}
+/*end scroll top*/
+/*classes use all*/
+%upper {
+  text-transform: uppercase;
+}
+%hover {
+  color: #333;
+  background: rgb(247, 162, 83);
+  border: none;
+}
+%transition {
+  transition: all 0.3s ease-in-out;
+}
+%after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 85px;
+  background: $maincolor;
+}
+%afterbody {
+  margin: auto;
+  position: relative;
+  top: 7px;
+  right: 5px;
+}
